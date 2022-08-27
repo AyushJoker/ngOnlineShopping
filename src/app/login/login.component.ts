@@ -26,5 +26,4 @@ loginuser:User;
   },(err)=>{alert("There was a problem logging u out");}
   );
  }
-
 }

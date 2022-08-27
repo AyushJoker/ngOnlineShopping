@@ -25,7 +25,6 @@ export class ProductsingleComponent implements OnInit {
     console.log(Number(this.Id));
     this._service.getSingleProd(this.Id,this.ID1).subscribe(data=>
       {
-       
         this.currentproductlist=data;
         console.log(this.currentproductlist)
       }
