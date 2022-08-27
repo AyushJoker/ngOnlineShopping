@@ -12,8 +12,8 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
-import { EditAddressComponent } from './edit-address/edit-address.component';
-import { AddressComponent } from './address/address.component';
+
+
 import { OrdersComponent } from './orders/orders.component';
 import { CartComponent } from './cart/cart.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -31,8 +31,8 @@ import { CatwiseproductComponent } from './catwiseproduct/catwiseproduct.compone
     LoginComponent,
     ForgetpasswordComponent,
     ProfileDetailsComponent,
-    EditAddressComponent,
-    AddressComponent,
+
+
     OrdersComponent,
     CartComponent,
     ProductsingleComponent,
