@@ -1,0 +1,52 @@
+
+<div class="account section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="login-form border p-5">
+          <div class="text-center heading">
+            <h2 class="mb-2">Sign Up</h2>
+            <p class="lead">Already have an account? <a href="#" routerLink="/login"> Login now</a></p>
+          </div>
+          <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+            <div class="form-group mb-4">
+              <label for="Firstname">Enter Your First Name</label>
+              <input type="text" name="firstname" ngModel class="form-control" placeholder="Enter First Name">
+            </div>
+            <div class="form-group">
+              <label for="Lastname">Enter Your Last Name</label>
+              <input type="text" name="lastname" ngModel class="form-control" placeholder="Enter Last Name">
+            </div>
+            <div class="form-group mb-4">
+              <label for="Mobile">Enter Mobile Number</label>
+              <input type="text" name="mobile" ngModel class="form-control" placeholder="Enter Mobile Number">
+            </div>
+            <div class="form-group mb-4">
+              <label for="Email">Enter you Email</label>
+              <input type="text" name="email" ngModel class="form-control" placeholder="Enter Email Address">
+            </div>
+            <div class="form-group mb-4">
+              <label for="Password">Enter Password</label>
+         
+              <input type="text" name="password" ngModel class="form-control" placeholder="Enter Password">
+            </div>
+            <div class="form-group mb-4">
+              <label for="Confirm_Password">Confirm Your Password</label>
+         
+              <input type="text" name="confirm_password" ngModel class="form-control" placeholder="Confirm Password">
+            </div>
+            <div class="form-group mb-4">
+              <label for="City">Your City</label>
+              <input type="text" name="city" ngModel class="form-control" placeholder="Enter City Name">
+            </div>
+            <div class="form-group mb-4">
+              <label for="Pincode">Enter your Pincode</label>
+              <input type="text" name="pincode" ngModel class="form-control" placeholder="Enter Pincode">
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div padding:20>
+<ul *ngFor="let c of catprodlist">
+<div class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5">
+      <div class="product">
+          <div class="product-wrap">
+              <a href="#"routerLink="/productsingle/{{c.cid}}/{{c.pid}}"><img class="img-fluid w-100 mb-3 img-first" src="assets/images/{{c.pImage1}}" alt="product-img" /></a>
+          </div>
+          <div class="product-hover-overlay">
+              <a href="#"> <fa-icon [icon]="faCartShopping"></fa-icon></a>
+            </div>   
+          <div class="product-info">
+              <h2 class="product-title h5 mb-0"><a href="#">{{c.pName}}</a></h2>
+              <span class="price">
+                  ${{c.price}}
+              </span>
+          </div>
+      </div>
+    </div>
+ </ul>
+</div>
