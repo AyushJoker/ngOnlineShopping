@@ -16,36 +16,36 @@
         <li class="nav-item active">
           <a class="nav-link" routerLink="/product">Product </a>
         </li>
+       
         <li class="nav-item dropdown dropdown-slide">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
+          
+          <a class="nav-link dropdown-toggle"  id="navbarDropdown5" role="button" data-delay="350"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Category
           </a>
+          <div class="dropdown-menu dropdown-primary force-scroll">
           <ul mdbDropdownMenu class="dropdown-menu">
-            <tr *ngFor="let c of catlist">
-              <td><a routerLink="catwiseprod/{{c.cid}}"
-                >{{c.cName}}</a></td>
-          </tr>
+            <ul *ngFor="let c of catlist">
+                <li><a class="dropdown-item" href="#" routerLink="catwiseprod/{{c.cid}}">{{c.cName}}</a></li>
+              </ul>
           </ul>
-        </li>
+        </div>
         <li class="nav-item active">
           <a class="nav-link" href="#" routerLink="/cart">Cart</a>
         </li>
       
         <!-- Account -->
         <li class="nav-item dropdown dropdown-slide">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
+          <a class="nav-link dropdown-toggle" id="navbarDropdown5" role="button" data-delay="350"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Account.
           </a>
           <ul mdbDropdownMenu class="dropdown-menu">
             <li><a class="dropdown-item" href="#" routerLink="/order">Order</a></li>
-            <li><a class="dropdown-item" href="#" routerLink="/address">Address</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/profile-details">Profile</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/login">LogIn</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/signup" routerLinkActive="active">SignUp</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/forgetpassword">Forgot Password</a></li>
-          
           </ul>
         </li><!-- / Account -->
       </ul>

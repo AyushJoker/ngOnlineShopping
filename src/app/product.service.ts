@@ -3,12 +3,16 @@ import { Injectable } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { Product } from 'src/models/product';
+import { catchError, Observable, throwError } from 'rxjs';
+import { Product } from 'src/models/product';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
   httpOptions = { headers: new HttpHeaders({ 'Content-type': 'application/json' }) };
+
   url:string="https://localhost:44323/api/product";
 
   constructor(private http:HttpClient) { }
@@ -45,4 +49,5 @@ handleError(error:HttpErrorResponse){
   return throwError(errorMessage);
 
 }
-}
+
+

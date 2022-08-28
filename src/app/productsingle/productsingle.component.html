@@ -8,11 +8,12 @@
                       <div class="images p-3">
                           <div class="text-center p-4"> <img id="main-image" src="assets/images/{{singleprod.pImage1}}" width="250" /> </div>
                       </div>
+                             <div class="thumbnail text-center"> <img onclick="change_image(this)" src="assets/images/{{singleprod.pImage2}}" width="100"> <img onclick="change_image(this)" src="assets/images/{{singleprod.pImage3}}" width="100"> </div>
                   </div>
                   <div class="col-md-6">
                       <div class="product p-4">
                           <div class="d-flex justify-content-between align-items-center">         
-                              <div class="d-flex align-items-center"> <a class="btn btn" role="button" href="#" routerLink="/catwiseprod/{{singleprod.cid}}"><div class="m8">Back</div> </a> </div>
+                              <div class="d-flex align-items-center"> <a class="btn btn" role="button" href="#" routerLink="/catwiseprod/{{singleprod.cid}}"><fa-icon [icon]="faArrowLeftLong"></fa-icon> </a><div class="m8">Back</div> </div>
                           </div>
                           <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">winter</span>
                               <h5 class="text-uppercase">{{singleprod.pName}}</h5>
