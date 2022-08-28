@@ -5,7 +5,13 @@
   #firstNav a {
     color: white;
   }
+  .force-scroll {
 
+    overflow-y: scroll;
+    width:410px;
+    height: 200px;
+    
+    }
   .canv{
     height: 200px;
     width: 500px;
