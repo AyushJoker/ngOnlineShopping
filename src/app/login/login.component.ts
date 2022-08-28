@@ -22,6 +22,7 @@ loginuser:User;
       this.loginuser=body;
       console.log(res);
       sessionStorage.setItem("username",this.loginuser.email);
+      this.route.navigateByUrl("home");
     }
   },(err)=>{alert("There was a problem logging u out");}
   );

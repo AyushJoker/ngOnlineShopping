@@ -29,7 +29,7 @@ import { RetailerListComponent } from './retailer-list/retailer-list.component';
 import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 //import { CategoryComponent } from './category/category.component';
-=======
+
 
 
 @NgModule({

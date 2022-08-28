@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit {
   faShoppingBag=faShoppingBag;
   faSearch=faSearch;
   ngOnInit(): void {
-    this._service.getproducts().subscribe(data => { this.productlist = data; console.log(this.productlist) });
+    this._service.getProducts().subscribe(data => { this.productlist = data; console.log(this.productlist) });
   }
   delete(id:any)
   {

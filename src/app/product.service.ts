@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { Product } from 'src/models/product';
-import { catchError, Observable, throwError } from 'rxjs';
-import { Product } from 'src/models/product';
+
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
@@ -17,7 +16,7 @@ export class ProductService {
 
   constructor(private http:HttpClient) { }
 
-getproducts():Observable<any>
+getProducts():Observable<any>
 {
   return this.http.get<any>(this.url);
 }
@@ -51,3 +50,4 @@ handleError(error:HttpErrorResponse){
 }
 
 
+}
