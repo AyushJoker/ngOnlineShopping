@@ -27,6 +27,7 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { RetailerListComponent } from './retailer-list/retailer-list.component';
 import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 //import { CategoryComponent } from './category/category.component';
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
     ProductListComponent,
     RetailerListComponent,
     RetailerEditComponent,
+    AdminloginComponent,
   ],
   imports: [
     FontAwesomeModule,

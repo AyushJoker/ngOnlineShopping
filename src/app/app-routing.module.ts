@@ -18,6 +18,7 @@ import { RetailerListComponent } from './retailer-list/retailer-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -37,7 +38,8 @@ const routes: Routes = [
   {path:"retailerdash", component:RetailerdashComponent},
   {path:"productlist", component:ProductListComponent},
   {path:"productedit/:id",component:ProductEditComponent},
-  {path:"productcreate",component:ProductAddComponent}
+  {path:"productcreate",component:ProductAddComponent},
+  {path:"adminlogin",component:AdminloginComponent}
 ];
 
 @NgModule({
