@@ -12,6 +12,13 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsingleComponent } from './productsingle/productsingle.component';
 import { ProductComponent } from './product/product.component';
 import { CatwiseproductComponent } from './catwiseproduct/catwiseproduct.component';
+import { RetailerLoginComponent } from './retailer-login/retailer-login.component';
+import { RetailerdashComponent } from './retailerdash/retailerdash.component';
+import { RetailerListComponent } from './retailer-list/retailer-list.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -20,12 +27,18 @@ const routes: Routes = [
   { path:"login", component:LoginComponent },
   { path:"forgetpassword", component:ForgetpasswordComponent },
   { path:"profile-details", component:ProfileDetailsComponent },
-
   { path:"order", component:OrdersComponent },
   { path:"cart", component:CartComponent },
   { path:"productsingle/:id/:id1", component:ProductsingleComponent },
   { path:"product", component:ProductComponent },
-  {path:"catwiseprod/:id", component:CatwiseproductComponent}
+  {path:"catwiseprod/:id", component:CatwiseproductComponent},
+  {path:"retailerlogin",component:RetailerLoginComponent},
+  {path:"retailerlist", component:RetailerListComponent},
+  {path:"retailerdash", component:RetailerdashComponent},
+  {path:"productlist", component:ProductListComponent},
+  {path:"productedit/:id",component:ProductEditComponent},
+  {path:"productcreate",component:ProductAddComponent},
+  {path:"adminlogin",component:AdminloginComponent}
 ];
 
 @NgModule({

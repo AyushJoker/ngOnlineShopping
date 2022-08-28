@@ -7,5 +7,6 @@ export interface Product{
     pImage1:string;
     pImage2:string;
     pImage3:string;
+    rid:number;
 }
     

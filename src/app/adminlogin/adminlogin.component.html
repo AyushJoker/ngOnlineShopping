@@ -1,0 +1,26 @@
+
+<div class="account section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="login-form border p-5">
+            <div class="text-center heading">
+              <h2 class="mb-2">Admin Login</h2>
+    
+            </div>
+            <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+              <div class="form-group mb-4">
+                <label for="username">Enter Username</label>
+                <input #email="ngModel" type="text" name="username" class="form-control" ngModel>
+              </div>
+              <div class="form-group">
+                <label for="password">Enter Password</label>
+                <input #password="ngModel" type="text" name="password" class="form-control" ngModel>
+              </div>
+              <button routerLink="/retailerlist" type="submit">LogIn</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
