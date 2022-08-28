@@ -1,0 +1,36 @@
+<p>retailer-edit works!</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(modifiedretailer)" >
+   
+   
+    <div class="form-group">
+    
+        <div class="form-group">
+            <label for="rid">Retailer Id</label>
+            <input #id="ngModel" type="number" readonly name="rid" class="form-control" [(ngModel)]="modifiedretailer.rid">
+        </div>
+        <div class="form-group">
+            <label for="aid">Admin Id</label>
+            <input #id="ngModel" type="number" readonly name="rid" class="form-control" [(ngModel)]="modifiedretailer.aid">
+        </div>
+    <label for="rName">Retailer Name</label><br>
+    <input #catname="ngModel"  type="text" name="rName" class="form-control" [(ngModel)]="modifiedretailer.rName">
+        
+    <div>
+    <label for="email">Retailer Email</label><br>
+    <input #catname="ngModel"  type="text" name="email" class="form-control" [(ngModel)]="modifiedretailer.email">
+        </div>
+        <div>
+            <label for="password">Retailer Password</label><br>
+            <input #catname="ngModel"  type="text" name="password" class="form-control" [(ngModel)]="modifiedretailer.password">
+                </div>
+                <div>
+                    <label for="contactnumber">Retailer Conatct No:</label><br>
+                    <input #catname="ngModel"  type="text" name="contactnumber" class="form-control" [(ngModel)]="modifiedretailer.contactnumber">
+                        </div>
+    </div> 
+            <p>
+                <button type="submit" routerlink="/retailerlist">Submit Now</button>
+            </p>
+        
+        </form>
+      

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddressComponent } from './address/address.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
@@ -13,6 +12,12 @@ import { EditAddressComponent } from './edit-address/edit-address.component';
 import { ProductsingleComponent } from './productsingle/productsingle.component';
 import { ProductComponent } from './product/product.component';
 import { CatwiseproductComponent } from './catwiseproduct/catwiseproduct.component';
+import { RetailerLoginComponent } from './retailer-login/retailer-login.component';
+import { RetailerdashComponent } from './retailerdash/retailerdash.component';
+import { RetailerListComponent } from './retailer-list/retailer-list.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -22,12 +27,17 @@ const routes: Routes = [
   { path:"forgetpassword", component:ForgetpasswordComponent },
   { path:"profile-details", component:ProfileDetailsComponent },
   { path:"edit-address", component:EditAddressComponent },
-  { path:"address", component:AddressComponent },
   { path:"order", component:OrdersComponent },
   { path:"cart", component:CartComponent },
   { path:"productsingle/:id/:id1", component:ProductsingleComponent },
   { path:"product", component:ProductComponent },
-  {path:"catwiseprod/:id", component:CatwiseproductComponent}
+  {path:"catwiseprod/:id", component:CatwiseproductComponent},
+  {path:"retailerlogin",component:RetailerLoginComponent},
+  {path:"retailerlist", component:RetailerListComponent},
+  {path:"retailerdash", component:RetailerdashComponent},
+  {path:"productlist", component:ProductListComponent},
+  {path:"productedit/:id",component:ProductEditComponent},
+  {path:"productcreate",component:ProductAddComponent}
 ];
 
 @NgModule({

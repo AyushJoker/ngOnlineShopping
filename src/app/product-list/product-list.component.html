@@ -1,0 +1,19 @@
+<div><h1>List of Products</h1></div>
+<br>
+<div>
+<a routerLink="productcreate" class="btn btn-warning"> Create New Product</a> -->
+<table border="1">
+    <tr><th>Product ID</th><th>Product Name</th><th>Product detail</th><th>Price</th><th>Image1</th><th>Image2</th><th>Image3</th>
+    <tr *ngFor="let p of productlist">
+        <td>{{p.pid}}</td>
+        <td>{{p.pName}}</td>
+        <td>{{p.pDetail}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.pImage1}}</td>
+        <td>{{p.pImage2}</td>
+        <td>{{p.pImage2}}</td>
+        <td><a routerLink="productedit/{{p.pid}}" class="btn btn-warning"> Edit </a></td>
+        <td><a (click)="delete(p.pid)" href="javascript:void()"> Delete </a></td>
+    </tr>
+</table>
+</div> 

@@ -1,0 +1,43 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(modifiedproduct)" >
+   
+   
+    <div class="form-group">
+    
+        <div class="form-group">
+            <label for="pid">Product Id</label>
+            <input #id="ngModel" type="number" readonly name="pid" class="form-control" [(ngModel)]="modifiedproduct.pid">
+        </div>
+        <div class="form-group">
+            <label for="cid">Admin Id</label>
+            <input #id="ngModel" type="number" readonly name="cid" class="form-control" [(ngModel)]="modifiedproduct.cid">
+        </div>
+    <label for="pName">Product Name</label><br>
+    <input #catname="ngModel"  type="text" name="pName" class="form-control" [(ngModel)]="modifiedproduct.pName">
+        
+    <div>
+    <label for="price">Price</label><br>
+    <input #catname="ngModel"  type="text" name="price" class="form-control" [(ngModel)]="modifiedproduct.price">
+        </div>
+        <div>
+            <label for="pDetail">Details</label><br>
+            <input #catname="ngModel"  type="text" name="pDetail" class="form-control" [(ngModel)]="modifiedproduct.pDetail">
+                </div>
+                <div>
+                    <label for="pImage1">Image 1</label><br>
+                    <input #catname="ngModel"  type="text" name="pImage1" class="form-control" [(ngModel)]="modifiedproduct.pImage1">
+                        </div>
+                        <div>
+                            <label for="pImage2">Image 2</label><br>
+                            <input #catname="ngModel"  type="text" name="pImage2" class="form-control" [(ngModel)]="modifiedproduct.pImage2">
+                                </div>
+                                <div>
+                                    <label for="pImage3">Image 3</label><br>
+                                    <input #catname="ngModel"  type="text" name="pImage3" class="form-control" [(ngModel)]="modifiedproduct.pImage3">
+                                        </div>
+    </div> 
+            <p>
+                <button type="submit" routerlink="/retailerlist">Submit Now</button>
+            </p>
+        
+        </form>
+      
