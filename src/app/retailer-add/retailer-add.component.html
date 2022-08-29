@@ -1,0 +1,32 @@
+<p>Add New Retailer</p>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+   
+   
+    <div class="form-group">
+    
+        <div class="form-group">
+            <label for="aid">Admin Id</label>
+            <input #id="ngModel" type="number" name="aid" class="form-control" ngModel>
+        </div>
+    <label for="rName">Retailer Name</label><br>
+    <input #catname="ngModel"  type="text" name="rName" class="form-control" ngModel>
+        
+    <div>
+    <label for="email">Retailer Email</label><br>
+    <input #catname="ngModel"  type="text" name="email" class="form-control" ngModel>
+        </div>
+        <div>
+            <label for="password">Retailer Password</label><br>
+            <input #catname="ngModel"  type="text" name="password" class="form-control" ngModel>
+                </div>
+                <div>
+                    <label for="contactnumber">Retailer Conatct No:</label><br>
+                    <input #catname="ngModel"  type="text" name="contactnumber" class="form-control" ngModel>
+                        </div>
+                    </div> 
+            <p>
+                <button type="submit" routerlink="/retailerlist">Submit Now</button>
+            </p>
+        
+        </form>
+      

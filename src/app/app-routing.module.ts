@@ -20,6 +20,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
+import { RetailerAddComponent } from './retailer-add/retailer-add.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -36,10 +37,11 @@ const routes: Routes = [
   {path:"retailerlogin",component:RetailerLoginComponent},
   {path:"retailerlist", component:RetailerListComponent},
   {path:"retaileredit/:id", component:RetailerEditComponent},
+  {path:"retaileradd", component:RetailerAddComponent},
   {path:"retailerdash", component:RetailerdashComponent},
   {path:"productlist", component:ProductListComponent},
   {path:"productedit/:id",component:ProductEditComponent},
-  {path:"productcreate",component:ProductAddComponent},
+  {path:"productadd",component:ProductAddComponent},
   {path:"adminlogin",component:AdminloginComponent}
 ];
 
