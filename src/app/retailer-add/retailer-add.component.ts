@@ -21,7 +21,9 @@ export class RetailerAddComponent implements OnInit {
   {
     console.log(myForm.value)
   }
+  
   );
+  this.route.navigateByUrl("retailerlist");
   
   //this.router.navigateByUrl("cat-list");
   }
