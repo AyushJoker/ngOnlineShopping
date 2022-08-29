@@ -1,15 +1,16 @@
-<div><h1>List of Retailers</h1></div>
-<br>
 <div>
-<a routerLink="/retaileradd" class="btn btn-warning"> Create New Retailer</a> 
-<table border="1">
-    <tr><th>Reatiler ID</th><th>Retailer Name</th>
+    
+<table class="center"><tr><a routerLink="/retaileradd" class="btn btn-warning"> Add New Retailer</a></tr></table>  
+<table class="center">
+    <tr><th>Reatiler ID</th>
+        <th>Retailer Name</th>
+        <th>Contact Number</th>
+        <th colspan="2">Functionalities</th>
     <tr *ngFor="let r of retailerlist">
         <td>{{r.rid}}</td>
         <td>{{r.rName}}</td>
         <td>{{r.contactnumber}}</td>
-        <td><a routerLink="/productlist/{{r.rid}}" class="btn btn-warning"> Product List </a></td>
-        <td><a routerLink="/retaileredit/{{r.rid}}" class="btn btn-warning"> Edit </a></td>
+        <td><a routerLink="/retaileredit/{{r.rid}}" class="btn btn-warning"> Edit Retailer </a></td>
         <td><a (click)="delete(r.rid)" href="javascript:void()">Delete </a></td>
     </tr>
 </table>

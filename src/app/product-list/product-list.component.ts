@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faSearch, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { Product } from 'src/models/product';
 import { ProductService } from '../product.service';
-
+import { faArrowLeftLong, faBackward } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit {
 
   productlist: Product[] = [];
   constructor(private _service: ProductService) { }
-
+  faArrowLeftLong=faArrowLeftLong;
   faShoppingBag=faShoppingBag;
   faSearch=faSearch;
   ngOnInit(): void {

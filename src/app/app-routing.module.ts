@@ -21,6 +21,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
 import { RetailerAddComponent } from './retailer-add/retailer-add.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -42,7 +43,8 @@ const routes: Routes = [
   {path:"productlist", component:ProductListComponent},
   {path:"productedit/:id",component:ProductEditComponent},
   {path:"productadd",component:ProductAddComponent},
-  {path:"adminlogin",component:AdminloginComponent}
+  {path:"adminlogin",component:AdminloginComponent},
+  {path:"admindash",component:AdmindashboardComponent}
 ];
 
 @NgModule({

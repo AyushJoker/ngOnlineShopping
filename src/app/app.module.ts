@@ -29,6 +29,7 @@ import { RetailerListComponent } from './retailer-list/retailer-list.component';
 import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { RetailerAddComponent } from './retailer-add/retailer-add.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 //import { CategoryComponent } from './category/category.component';
 
 
@@ -59,6 +60,7 @@ import { RetailerAddComponent } from './retailer-add/retailer-add.component';
     RetailerEditComponent,
     AdminloginComponent,
     RetailerAddComponent,
+    AdmindashboardComponent,
   ],
   imports: [
     FontAwesomeModule,
