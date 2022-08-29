@@ -19,7 +19,6 @@ loginuser:User;
   let body=myform.value;
   this._service.CheckLogin(body).subscribe((res)=>{
     if(res.status==200){
-      alert("Login Success");
       this.loginuser=body;
       console.log(res);
       sessionStorage.setItem("loginname",this.loginuser.email);

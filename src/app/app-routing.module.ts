@@ -19,6 +19,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:"catwiseprod/:id", component:CatwiseproductComponent},
   {path:"retailerlogin",component:RetailerLoginComponent},
   {path:"retailerlist", component:RetailerListComponent},
+  {path:"retaileredit/:id", component:RetailerEditComponent},
   {path:"retailerdash", component:RetailerdashComponent},
   {path:"productlist", component:ProductListComponent},
   {path:"productedit/:id",component:ProductEditComponent},

@@ -28,7 +28,7 @@ retailer:Retailer;
   this._service.Updateretailer(this.modifiedretailer).subscribe(data=>
     console.log(modifiedretailer)
     );
-  this.router.navigateByUrl("retailer-list");
+  this.router.navigateByUrl("retailerlist");
   }
 
 
