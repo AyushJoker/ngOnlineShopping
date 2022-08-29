@@ -9,14 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserService {
   httpOptions = { headers: new HttpHeaders({ 'Content-type': 'application/json' }) };
   url="https://localhost:44323/api/user";
+  user:User;
   constructor(private http:HttpClient) { }
   getUsers():Observable<any>
   {
     return this.http.get<any>(this.url);
   }
-  getUsersById(id:number):Observable<any>
+  getUserByUsername(username:any):Observable<any>
   {
-    return this.http.get<any>(this.url+"/"+id);
+    return this.http.get<any>(this.url+"/"+username);
   }
   UpdateUser( user:User): Observable<User> {
     return this.http.put<User>(this.url+"/"+ user.id,user,this.httpOptions).pipe(catchError(this.handleError));
