@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/models/user';
+import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,10 +22,10 @@ loginuser:User;
       alert("Login Success");
       this.loginuser=body;
       console.log(res);
-      sessionStorage.setItem("username",this.loginuser.email);
+      sessionStorage.setItem("loginname",this.loginuser.email);
       this.route.navigateByUrl("home");
     }
-  },(err)=>{alert("There was a problem logging u out");}
+  },(err)=>{alert("Please enter the correct login details");}
   );
  }
 }

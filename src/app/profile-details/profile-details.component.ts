@@ -10,12 +10,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProfileDetailsComponent implements OnInit {
  
   constructor(private _service:UserService,private router:Router,private active:ActivatedRoute) { }
-  Id: number;
+  username=sessionStorage.getItem("loginname");
   currentuser:User ;
   ngOnInit(): void {
-    this.Id = this.active.snapshot.params["id"];
-    console.log(Number(this.Id));
-    this._service.getUsersById(this.Id).subscribe(data=>
+    console.log(this.username);
+    this._service.getUserByUsername(this.username).subscribe(data=>
       {
         this.currentuser=data;
         console.log(this.currentuser)
