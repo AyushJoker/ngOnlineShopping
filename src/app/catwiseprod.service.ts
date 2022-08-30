@@ -19,4 +19,8 @@ export class CatwiseprodService {
   getSingleProd(id:number,id1:number):Observable<any>{
     return this.http.get<any>(this.url+"/"+id+"/"+id1);
   }
+  getbySearch(item:string):Observable<any>
+  {
+    return this.http.get<any>(this.url+"/search"+item);
+  }
 }
