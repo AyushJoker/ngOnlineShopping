@@ -20,7 +20,7 @@ export class UserService {
     return this.http.get<any>(this.url+"/"+username);
   }
   UpdateUser( user:User): Observable<User> {
-    return this.http.put<User>(this.url+"/"+ user.email,user,this.httpOptions).pipe(catchError(this.handleError));
+    return this.http.put<User>(this.url+"/edituser/"+ user.email,user,this.httpOptions).pipe(catchError(this.handleError));
   }
   Updatepass( user:User): Observable<User> {
     return this.http.put<User>(this.url+"/updatepass/"+ user.email,user,this.httpOptions).pipe(catchError(this.handleError));

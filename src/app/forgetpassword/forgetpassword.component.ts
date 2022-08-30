@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/models/user';
 import { UserService } from '../user.service';
 
@@ -10,10 +11,17 @@ import { UserService } from '../user.service';
 })
 export class ForgetpasswordComponent implements OnInit {
   loginemail:User;
+otpGenerated:boolean=false;
   constructor(private _service:UserService,private route:Router,private activeroute:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
+  RequestOtp(){
+        var val = Math.floor(1000 + Math.random() * 9000);
+        console.log(val);
+        this.otpGenerated=true
+        return val
+   }
  onSubmit(myform:any){
   let body=myform.value;
   this._service.CheckEmail(body).subscribe((res)=>{

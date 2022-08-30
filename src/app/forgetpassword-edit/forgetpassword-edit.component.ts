@@ -9,9 +9,8 @@ import { UserService } from '../user.service';
   styleUrls: ['./forgetpassword-edit.component.css']
 })
 export class ForgetpasswordEditComponent implements OnInit {
-  username = sessionStorage.getItem("loginname");
-  modifieduser: User;
-
+  username=sessionStorage.getItem("loginname");
+  modifieduser  :User;
   user: User;
 
   constructor(private _service: UserService, private activerout: ActivatedRoute, private router: Router) { }
