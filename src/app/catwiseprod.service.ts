@@ -14,13 +14,13 @@ export class CatwiseprodService {
   constructor(private http:HttpClient) { }
   getCatProdById(id:number):Observable<any>
   {
-    return this.http.get<any>(this.url+"/"+id);
+    return this.http.get<any>(this.url+"/prodlist/"+id);
   }
   getSingleProd(id:number,id1:number):Observable<any>{
-    return this.http.get<any>(this.url+"/"+id+"/"+id1);
+    return this.http.get<any>(this.url+"/product/"+id+"/"+id1);
   }
-  getbySearch(item:string):Observable<any>
+  getProdbySearch(item:string):Observable<any>
   {
-    return this.http.get<any>(this.url+"/search"+item);
+    return this.http.get<any>(this.url+"/search/"+item);
   }
 }
