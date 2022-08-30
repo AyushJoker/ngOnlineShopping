@@ -51,12 +51,10 @@
       </ul>
       <body class="boxsrch">
         <div class="input-group rounded">
-          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-            aria-describedby="search-addon" />
-          <span class="input-group-text border-0" id="search-addon">
-            <fa-icon [icon]="faSearch"></fa-icon>
-           <!-- <i class="fa fa-search" aria-hidden="true"></i>  -->
-          </span>
+          <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+            <input #pName="ngModel" type="text" name="pName" class="form-control" ngModel>
+            <button type="submit">Search</button>
+        </form>
         </div>
       </body>
     </div>
