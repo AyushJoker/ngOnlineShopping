@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CartComponent } from './cart/cart.component';
-
 import { ProductsingleComponent } from './productsingle/productsingle.component';
 import { ProductComponent } from './product/product.component';
 import { CatwiseproductComponent } from './catwiseproduct/catwiseproduct.component';
@@ -23,6 +22,7 @@ import { RetailerEditComponent } from './retailer-edit/retailer-edit.component';
 import { RetailerAddComponent } from './retailer-add/retailer-add.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { SearchresultComponent } from './searchresult/searchresult.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -33,6 +33,7 @@ const routes: Routes = [
   { path:"profile-details", component:ProfileDetailsComponent },
   { path:"order", component:OrdersComponent },
   { path:"cart", component:CartComponent },
+  { path:"searchresult/:id", component:SearchresultComponent },
   { path:"productsingle/:id/:id1", component:ProductsingleComponent },
   { path:"product", component:ProductComponent },
   {path:"catwiseprod/:id", component:CatwiseproductComponent},
