@@ -31,7 +31,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { RetailerAddComponent } from './retailer-add/retailer-add.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+
 import { SearchresultComponent } from './searchresult/searchresult.component';
+
+import { ForgetpasswordEditComponent } from './forgetpassword-edit/forgetpassword-edit.component';
 //import { CategoryComponent } from './category/category.component';
 
 
@@ -64,7 +67,11 @@ import { SearchresultComponent } from './searchresult/searchresult.component';
     RetailerAddComponent,
     AdmindashboardComponent,
     UserEditComponent,
+
     SearchresultComponent,
+
+    ForgetpasswordEditComponent,
+
   ],
   imports: [
     FontAwesomeModule,

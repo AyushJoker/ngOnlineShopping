@@ -22,6 +22,9 @@ export class UserService {
   UpdateUser( user:User): Observable<User> {
     return this.http.put<User>(this.url+"/"+ user.email,user,this.httpOptions).pipe(catchError(this.handleError));
   }
+  Updatepass( user:User): Observable<User> {
+    return this.http.put<User>(this.url+"/updatepass/"+ user.email,user,this.httpOptions).pipe(catchError(this.handleError));
+  }
   AddUser(newuser:User):Observable<any>
 {
   return this.http.post<any>(this.url,newuser)
@@ -33,6 +36,10 @@ deleteUser(id:number):Observable<any>
  CheckLogin(body:any):Observable<any>{
 return this.http.post<any>((this.url+"/login"),body,{observe:'response'});
  }
+ CheckEmail(body:any):Observable<any>{
+  return this.http.post<any>((this.url+"/checkemail"),body,{observe:'response'});
+   }
+
  handleError(error:HttpErrorResponse){
   let errorMessage="";
   errorMessage=error.status +'\n'+error.statusText+'\n'+error.error;

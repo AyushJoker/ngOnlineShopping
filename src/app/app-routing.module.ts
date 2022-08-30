@@ -23,6 +23,7 @@ import { RetailerAddComponent } from './retailer-add/retailer-add.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { SearchresultComponent } from './searchresult/searchresult.component';
+import { ForgetpasswordEditComponent } from './forgetpassword-edit/forgetpassword-edit.component';
 const routes: Routes = [
   { path:"home", component:HomeComponent},
  { path:"", component:SignupComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path:"signup", component:SignupComponent },
   { path:"login", component:LoginComponent },
   { path:"forgetpassword", component:ForgetpasswordComponent },
+  { path:"forgetpasswordedit", component:ForgetpasswordEditComponent },
   { path:"profile-details", component:ProfileDetailsComponent },
   { path:"order", component:OrdersComponent },
   { path:"cart", component:CartComponent },
