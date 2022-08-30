@@ -10,8 +10,8 @@
         <td>{{r.rid}}</td>
         <td>{{r.rName}}</td>
         <td>{{r.contactnumber}}</td>
-        <td><a routerLink="/retaileredit/{{r.rid}}" class="btn btn-warning"> Edit Retailer </a></td>
-        <td><a (click)="delete(r.rid)" href="javascript:void()">Delete </a></td>
+        <td><a routerLink="/retaileredit/{{r.rid}}" class="btn btn-info"> Edit Retailer </a></td>
+        <td><a class="btn btn-danger"(click)="delete(r.rid)" href="javascript:void()">Delete </a></td>
     </tr>
 </table>
 </div> 
