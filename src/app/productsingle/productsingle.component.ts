@@ -6,18 +6,21 @@ import { CatWiseProd } from 'src/models/catwiseprod';
 import { CatwiseprodService } from '../catwiseprod.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import { CartorderService } from '../cartorder.service';
+
 @Component({
   selector: 'app-productsingle',
   templateUrl: './productsingle.component.html',
   styleUrls: ['./productsingle.component.css']
 })
 export class ProductsingleComponent implements OnInit {
-  constructor(private _service:CatwiseprodService,private router:Router,private active:ActivatedRoute) { }
+  constructor(private cartService: CartorderService, private _service:CatwiseprodService,private router:Router,private active:ActivatedRoute) { }
   faArrowLeftLong=faArrowLeftLong;
   faAngleDoubleLeft=faAngleDoubleLeft;
   faShoppingCart=faShoppingCart
   Id: number;
   ID1:number
+  product: CatWiseProd
   currentproductlist:CatWiseProd[]=[] ;
   ngOnInit(): void {
     this.Id = this.active.snapshot.params["id"];
@@ -29,6 +32,10 @@ export class ProductsingleComponent implements OnInit {
         console.log(this.currentproductlist)
       }
       );
+  }
+  addToCart(product:CatWiseProd) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 }
 
