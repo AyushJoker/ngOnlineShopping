@@ -9,10 +9,7 @@
               <a href="#"routerLink="/productsingle/{{c.cid}}/{{c.pid}}"> <fa-icon [icon]="faCartShopping"></fa-icon></a>
             </div>   
           <div class="product-info">
-              <h2 class="product-title h5 mb-0"><a href="#">{{c.pName}}</a></h2>
-              <span class="price">
-                  ${{c.price}}
-              </span>
+            <div class="row"><strong>{{c.pName}} </strong><h6 class="mb-4">Only<strong style="color:green"> ₹{{c.price}} </strong>upto 10% off </h6></div>
           </div>
       </div>
     </div>

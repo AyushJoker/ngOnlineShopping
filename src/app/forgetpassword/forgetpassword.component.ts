@@ -11,16 +11,24 @@ import { UserService } from '../user.service';
 })
 export class ForgetpasswordComponent implements OnInit {
   loginemail:User;
+  OTP:number;
 otpGenerated:boolean=false;
   constructor(private _service:UserService,private route:Router,private activeroute:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
-  RequestOtp(){
-        var val = Math.floor(1000 + Math.random() * 9000);
-        console.log(val);
-        this.otpGenerated=true
-        return val
+  RequestOtp(myform:any){
+    let body=myform.value;
+    this._service.CheckEmail(body).subscribe((res)=>{
+      if(res.status==200){
+        this.OTP = Math.floor(1000 + Math.random() * 9000);
+          console.log(this.OTP);
+          this.otpGenerated=true
+        this.loginemail=body;
+        console.log(res);
+      }
+    },(err)=>{alert("Enter a Correct Email");}
+    );
    }
  onSubmit(myform:any){
   let body=myform.value;
@@ -31,7 +39,8 @@ otpGenerated:boolean=false;
       sessionStorage.setItem("loginname",this.loginemail.email);
       this.route.navigateByUrl("forgetpasswordedit");
     }
-  },(err)=>{alert("Please enter the correct email");}
+  },(err)=>{alert("Please Enter the correct email");}
   );
  }
+
 }
