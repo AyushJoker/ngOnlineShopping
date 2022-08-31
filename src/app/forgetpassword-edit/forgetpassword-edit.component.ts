@@ -29,8 +29,5 @@ export class ForgetpasswordEditComponent implements OnInit {
     alert("Password updated");
     this.router.navigateByUrl("login");
   }
-
-
-
 }
 

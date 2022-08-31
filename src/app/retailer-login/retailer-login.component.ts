@@ -22,6 +22,7 @@ export class RetailerLoginComponent implements OnInit {
       this.loginretail=body;
       console.log(res);
       sessionStorage.setItem("email",this.loginretail.email);
+      this.route.navigateByUrl("productlist");
     }
   },(err)=>{alert("There was a problem logging in retailer");}
   );

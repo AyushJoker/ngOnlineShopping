@@ -22,6 +22,7 @@ export class AdminloginComponent implements OnInit {
       this.loginadmin=body;
       console.log(res);
       sessionStorage.setItem("username",this.loginadmin.username);
+      this.route.navigateByUrl("admindash");
     }
   },(err)=>{alert("There was a problem logging u out");}
   );
