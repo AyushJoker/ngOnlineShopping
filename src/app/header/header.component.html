@@ -49,14 +49,14 @@
           </ul>
         </li><!-- / Account -->
       </ul>
-      <body class="boxsrch">
-        <div class="input-group rounded">
-          <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
-            <input #pName="ngModel" type="text" name="pName" class="form-control" ngModel>
-            <button type="submit">Search</button>
-        </form>
-        </div>
-      </body>
+      <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+      <div class="input-group rounded">
+        <input #pName="ngModel" type="text" name="pName" placeholder="Search Products"class="form-control" ngModel>
+        <span class="input-group-text border-0" id="search-addon">
+          <button type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+        </span>
+      </div>
+      </form>
     </div>
   </div>
 </nav>

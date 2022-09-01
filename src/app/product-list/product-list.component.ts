@@ -46,5 +46,6 @@ export class ProductListComponent implements OnInit {
       console.log(this.modifiedproduct)
     );
     this.router.navigateByUrl("productlist");
+    window.location.reload();
 }
 }
