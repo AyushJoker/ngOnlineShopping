@@ -6,6 +6,6 @@ export interface User{
     password:string;
     pincode:string;
     city:string;
-    confirm_password:string;
+    confirm_Password:string;
     mobile:string;
 }

@@ -10,20 +10,23 @@ import { UserService } from '../user.service';
 })
 export class ForgetpasswordEditComponent implements OnInit {
   username=sessionStorage.getItem("loginname");
-  modifieduser  :User;
-  user: User;
-
+ 
+ user: User;
+ newpassword:string
+ confirmpassword:string
   constructor(private _service: UserService, private activerout: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     console.log(this.username);
     this._service.getUserByUsername(this.username).subscribe(data => {
-      this.modifieduser = data;
-      console.log(this.modifieduser)
+      this.user= data;
+      console.log(this.user)
     });
   }
-  onSubmit(modifieduser: any) {
-    this._service.Updatepass(this.modifieduser).subscribe(data =>
+  onSubmit(modifieduser: User) {
+    modifieduser.password=this.newpassword
+    modifieduser.confirm_Password=this.confirmpassword
+    this._service.Updatepass(modifieduser).subscribe(data =>
       console.log(modifieduser)
     );
     alert("Password updated");

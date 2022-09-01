@@ -17,18 +17,12 @@ export class CartorderService {
   {
     return this.http.get<any>(this.url);
   }
-  AddCartItem(newcartitem:CartOrder): Observable<any>
+  addCartItem(newcartitem:CartOrder): Observable<any>
   {
+    alert(newcartitem)
     return this.http.post<any>(this.url,newcartitem);
   }
-  addToCart(product: CatWiseProd) {
-    this.items.push(product);
-  }
-  getItems() {
-    return this.items;
-  }
-  clearCart(id:number) {
-    this.items = [];
-    return this.items;
-  }
+ getItem(){
+  
+ }
 }

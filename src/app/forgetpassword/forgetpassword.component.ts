@@ -26,6 +26,7 @@ otpGenerated:boolean=false;
           this.otpGenerated=true
         this.loginemail=body;
         console.log(res);
+      
       }
     },(err)=>{alert("Enter a Correct Email");}
     );
@@ -36,7 +37,6 @@ otpGenerated:boolean=false;
     if(res.status==200){
       this.loginemail=body;
       console.log(res);
-      sessionStorage.setItem("loginname",this.loginemail.email);
       this.route.navigateByUrl("forgetpasswordedit");
     }
   },(err)=>{alert("Please Enter the correct email");}

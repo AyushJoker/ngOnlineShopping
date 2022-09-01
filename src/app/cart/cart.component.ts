@@ -9,15 +9,12 @@ import { CatWiseProd } from 'src/models/catwiseprod';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  items = this.cartService.getItems();
+
   constructor(private cartService: CartorderService) { }
 
   ngOnInit(): void {
     
   }
-  clearCart() {
-    this.items = [];
-    return this.items;
-  }
+
 
 }
