@@ -7,12 +7,13 @@
         <th>Price</th>
         <th>Specification</th>
         <th>Action</th>
-    <!-- <tr *ngFor="let p of items">
+    <tr *ngFor="let p of items">
         <td><img src="assets/images/{{p.pImage1}}" width="100" height="70"></td>
         <td>{{p.pName}}</td>
-        <td>{{p.price | currency}}</td>
+        <td>₹{{p.price}}</td>
         <td>{{p.pDetail}}</td>
-       <td><a class="btn btn-danger"(click)="clearCart()" href="javascript:void()">Remove </a></td> -->
+       <td *ngIf="isorderplaced==false"><a class="btn btn-danger"(click)="checkoutCart()">Checkout</a></td>
+       <td *ngIf="isorderplaced==true">Order Placed</td>
     </tr>
 </table>
 </div> 

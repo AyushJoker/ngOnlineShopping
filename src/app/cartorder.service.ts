@@ -19,10 +19,16 @@ export class CartorderService {
   }
   addCartItem(newcartitem:CartOrder): Observable<any>
   {
-    alert(newcartitem)
     return this.http.post<any>(this.url,newcartitem);
   }
- getItem(){
-  
- }
+  addToCart(product: CatWiseProd) {
+    this.items.push(product);
+  }
+  getItems() {
+    return this.items;
+  }
+  clearCart(id:number) {
+    this.items = [];
+    return this.items;
+  }
 }

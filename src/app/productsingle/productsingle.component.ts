@@ -34,14 +34,8 @@ export class ProductsingleComponent implements OnInit {
       );
   }
   addToCart(product:CatWiseProd) {
-    let p={"pid": product.pid,
-    "uid":1,
-    "quantity": 1,
-    "price": product.price,
-    "cost": product.price*1,
-    "pName": product.pName}
-    this.cartService.addCartItem(p);
-    // window.alert('Your product has been added to the cart!');
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 }
 

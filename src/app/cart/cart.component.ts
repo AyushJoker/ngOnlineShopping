@@ -9,12 +9,16 @@ import { CatWiseProd } from 'src/models/catwiseprod';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
+  isorderplaced:boolean=false
+  items = this.cartService.getItems();
   constructor(private cartService: CartorderService) { }
 
   ngOnInit(): void {
     
   }
-
+  checkoutCart() {
+    this.isorderplaced=true
+    alert("Your Order has been succesfully placed ! Thank You")
+  }
 
 }

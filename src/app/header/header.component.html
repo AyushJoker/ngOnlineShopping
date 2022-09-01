@@ -41,13 +41,12 @@
             Account.
           </a>
           <ul mdbDropdownMenu class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" routerLink="/order">Order</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/profile-details">Profile</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/login">LogIn</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/signup" routerLinkActive="active">SignUp</a></li>
             <li><a class="dropdown-item" href="#" routerLink="/forgetpassword">Forgot Password</a></li>
           </ul>
-        </li><!-- / Account -->
+        </li>
       </ul>
       <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
       <div class="input-group rounded">

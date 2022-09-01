@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProfileDetailsComponent implements OnInit {
  
-  constructor(private _service:UserService,private router:Router,private active:ActivatedRoute) { }
+  constructor(private _service:UserService,private route:Router,private active:ActivatedRoute) { }
   username=sessionStorage.getItem("loginname");
   currentuser:User ;
   ngOnInit(): void {
@@ -20,6 +20,10 @@ export class ProfileDetailsComponent implements OnInit {
         console.log(this.currentuser)
       }
       );
+  }
+  LogOut(){
+    sessionStorage.clear()
+    this.route.navigateByUrl("signup")
   }
 
 }

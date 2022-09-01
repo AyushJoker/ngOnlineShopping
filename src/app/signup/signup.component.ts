@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
     let body=myform.value;
     //let body={"userName":""};
     this._service.AddUser(body).subscribe(data=>console.log(body));
-    this.route.navigateByUrl("/home");
+    this.route.navigateByUrl("/login");
   }
 }
 
