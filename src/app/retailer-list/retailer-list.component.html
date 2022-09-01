@@ -5,13 +5,16 @@
     <tr><th>Reatiler ID</th>
         <th>Retailer Name</th>
         <th>Contact Number</th>
+        <th>Status</th>
         <th colspan="2">Functionalities</th>
     <tr *ngFor="let r of retailerlist">
         <td>{{r.rid}}</td>
         <td>{{r.rName}}</td>
         <td>{{r.contactnumber}}</td>
+        <td *ngIf="r.isavailable==0"><a (click)="availability(r.rid)" class="btn btn-danger"> UnAvailable  </a></td>
+        <td *ngIf="r.isavailable==1"><a (click)="availability(r.rid)" class="btn btn-success"> Available </a></td>
         <td><a routerLink="/retaileredit/{{r.rid}}" class="btn btn-info"> Edit Retailer </a></td>
-        <td><a class="btn btn-danger"(click)="delete(r.rid)" href="javascript:void()">Delete </a></td>
+        <td><a class="btn btn-danger"(click)="delete(r.rid)" class="btn btn-danger">Permanent Delete</a></td>
     </tr>
 </table>
 </div> 

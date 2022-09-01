@@ -26,7 +26,7 @@ getProductById(id:number):Observable<any>
 }
 UpdateProduct( pro: Product): Observable<any> {
 
-  return this.http.put<any>(this.url+"/"+ pro.pid,pro,this.httpOptions).pipe(catchError(this.handleError));
+  return this.http.put<any>(this.url+"/updateproduct/"+ pro.pid,pro,this.httpOptions).pipe(catchError(this.handleError));
 
 }
 AddProduct(newproduct:Product): Observable<any>
@@ -36,6 +36,10 @@ AddProduct(newproduct:Product): Observable<any>
 DeleteProduct(id:number):Observable<any>
 {
   return this.http.delete<any>(this.url + "/" + id);
+}
+AvailableProduct(pro: Product):Observable<any>
+{
+  return this.http.put<any>(this.url+"/isavailable/"+ pro.pid,pro,this.httpOptions).pipe(catchError(this.handleError));
 }
 handleError(error:HttpErrorResponse){
 
