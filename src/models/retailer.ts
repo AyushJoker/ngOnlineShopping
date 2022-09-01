@@ -4,5 +4,6 @@ export interface Retailer{
     rName: string,
     email: string,
     password: string,
-    contactnumber: string
+    contactnumber: string,
+    isavailable:number
 }

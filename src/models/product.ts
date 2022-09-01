@@ -8,5 +8,6 @@ export interface Product{
     pImage2:string;
     pImage3:string;
     rid:number;
+    isavailable:number
 }
     
