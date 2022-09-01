@@ -8,6 +8,7 @@
         <th>Image1</th>
         <th>Image2</th>
         <th>Image3</th>
+        <th>Product Status</th>
         <th colspan="2">Functionalities</th>
         <th>Product Details</th>
     <tr *ngFor="let p of productlist">
@@ -17,8 +18,11 @@
         <td>{{p.pImage1}}</td>
         <td>{{p.pImage2}}</td>
         <td>{{p.pImage3}}</td>
+        <td *ngIf="p.isavailable==0"><a (click)="availability(p.pid)" class="btn btn-danger"> UnAvailable  </a></td>
+        <td *ngIf="p.isavailable==1"><a (click)="availability(p.pid)" class="btn btn-success"> Available </a></td>
         <td><a routerLink="/productedit/{{p.pid}}" class="btn btn-warning">Edit Product</a></td>
-        <td><a (click)="delete(p.pid)" href="javascript:void()"> Delete Product </a></td>
+        <td><a (click)="delete(p.pid)" class="btn btn-danger"> Permanent Delete </a></td>
+      
         <td>{{p.pDetail}}</td>
     </tr>
 </table>

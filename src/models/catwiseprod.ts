@@ -8,4 +8,5 @@ export interface CatWiseProd{
     pImage2: string
     pImage3: string
     cName: string
+    isavailable:number
 }
